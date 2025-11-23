@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 from scipy import stats
 import seaborn as sns
-from methods import RiskAwareBandit, OLSBandit
+from src.methods import RiskAwareBandit, OLSBandit
 from tqdm import tqdm
-from generators import NormalGenerator, TGenerator, UniformGenerator, TruncatedNormalGenerator
+from src.generators import NormalGenerator, TGenerator, UniformGenerator, TruncatedNormalGenerator
 import pickle
 import os
 from datetime import datetime
