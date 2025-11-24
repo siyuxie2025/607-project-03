@@ -2,6 +2,16 @@ import numpy as np
 from quantes.linear import low_dim
 from sklearn.linear_model import LinearRegression
 
+from src.numerical_stability import (
+    safe_divide, 
+    stable_variance, 
+    stable_std,
+    check_matrix_condition,
+    safe_matrix_inverse,
+    clip_extreme_values,
+    EPSILON
+)
+
 from abc import ABC, abstractmethod
 
 class ForcedSamplingBandit(ABC):
