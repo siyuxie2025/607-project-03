@@ -1,0 +1,151 @@
+{
+  "total_warnings": 1833,
+  "total_convergence_failures": 0,
+  "total_exceptions": 0,
+  "total_large_values": 0,
+  "warnings_sample": [
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.7045782
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.705634
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.7056818
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.705714
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.7057438
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.705771
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.7057972
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.705824
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.7058508
+    },
+    {
+      "message": "RuntimeWarning: invalid value encountered in divide",
+      "context": {
+        "n_sim": 10,
+        "K": 5,
+        "d": 10,
+        "T": 100,
+        "df": 2.0,
+        "q": 2,
+        "h": 0.5,
+        "tau": 0.5
+      },
+      "timestamp": 1763999827.7058759
+    }
+  ],
+  "convergence_failures_sample": [],
+  "exceptions_sample": [],
+  "large_values_sample": []
+}

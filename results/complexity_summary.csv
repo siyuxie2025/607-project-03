@@ -1,0 +1,5 @@
+Parameter,Exponent (b),Complexity,R²,Interpretation,Min→Max Time
+T,0.83,O(T^0.83),0.911,approximately linear O(n),0.65s → 4.71s
+K,0.54,O(K^0.54),0.996,sublinear (very efficient!),0.64s → 2.18s
+d,-0.32,O(d^-0.32),0.521,sublinear (very efficient!),0.90s → 2.39s
+df,-0.02,O(df^-0.02),0.022,sublinear (very efficient!),0.81s → 1.09s
