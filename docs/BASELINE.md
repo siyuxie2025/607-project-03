@@ -2,7 +2,19 @@
 
 ---
 ## Runtime profiling
-The total runtime of entire simulation study was approximately 3~4 minutes. 
+The total runtime of entire simulation study was approximately 2 minutes. 
+
+### Performance Benchmarks
+
+Runtime on [MacBook Pro M1, 16GB RAM]:
+
+| Configuration | Runtime | Speedup Factor |
+|--------------|---------|----------------|
+| T=50, K=2, d=10 | 2.1s | 1.0× (baseline) |
+| T=100, K=2, d=10 | 8.7s | 4.1× (confirms O(T²)) |
+| T=200, K=2, d=10 | 35.2s | 16.8× (confirms O(T²)) |
+| T=150, K=5, d=10 | 24.3s | 11.6× (T and K scale) |
+
 ### Quick Profile
 Default: n_sim = 10, K=5, d=10, T=100, df=2.0
 `python profile_simulation.py --quick`
@@ -32,6 +44,20 @@ This will:
 4. Analyze d complexity - how runtime scales with context dimension
 5. Test numerical stability - across df values (1.5, 2.0, 2.25, 3.0, 5.0, 10.0)
 
+**Generated Files**
+```
+results/
+├── simulation.prof              # cProfile data
+├── complexity_T.pdf            # Shows O(T²) growth
+├── complexity_K.pdf            # Shows linear scaling
+├── complexity_d.pdf            # Context dimension effect
+├── complexity_df.pdf           # Numerical stability test
+├── complexity_summary.csv      # Table for your report
+├── simulation_warnings.log     # Detailed issues
+└── numerical_issues_summary.json
+```
+
+
 From the profiling result, running the code below gives us specific runtime results. 
 ```{bash}
 python -m pstats results/simulation.prof
@@ -60,6 +86,13 @@ Among the functions, run_simulation, run_one_scenario, _run_one_timestep, update
 | **165520** | 0.089 | 0.000 | 0.231 | 0.000 | numpy/_core/numerictypes.py (isdtype) |
 | **40880** | 0.074 | 0.000 | 0.221 | 0.000 | scipy/_lib/_array_api.py (xp_promote) |
 | **54444** | 0.038 | 0.000 | 0.217 | 0.000 | quantes/utils.py (conquer_weight) |
+
+### Bottleneck Analysis
+
+1. Quantile regression: RiskAware bottleneck
+2. Main loop: unavoidable, parallization could be helpful
+3. Arm selection
+4. OLS updates: already very fast
 
 
 ## Complexity Analysis
@@ -93,70 +126,14 @@ Exceptions: 0
 Large values detected: 0
 
 Warnings by df (tail heaviness):
+```{bash}
   df=1.5: 102 warnings
   df=2.0: 1326 warnings
   df=2.25: 101 warnings
   df=3.0: 102 warnings
   df=5.0: 101 warnings
   df=10.0: 101 warnings
-
-
-### Performance Summary
-| Configuration | Runtime | Complexity |
-|--------------|---------|------------|
-| n_rounds=1000, n_arms=5 | 5.2s | Baseline |
-| n_rounds=2000, n_arms=5 | 21.1s | ~4x (confirms O(n²)) |
-| n_rounds=1000, n_arms=10 | 11.8s | ~2.3x (confirms O(m^1.2)) |
-
-See `results/complexity_*.pdf` for detailed plots.
-
----
-## Computational complexity analysis
-
-**Algorithm: Risk-Aware Bandit with Quantile Regression**
-1. Outer loop: `n_rounds` iterations
-2. For each round:
-   a. Pull each arm `q` times: $O(q*$`n_arms`$)$
-   b. Update quantile model for each arm:
-      - Quantile regression via sorting: $O(T * \log T$)
-      - Where $T$ = number of observations for that arm ≈ rounds/n_arms
-
-   c. Select arm based on Suboptimal arm selection: {TOBEDONE}
-
-[NEEDSMODIFY] Total theoretical complexity: O(n_rounds × n_arms × (n_rounds/n_arms) × log(n_rounds/n_arms)) ≈ O(n_rounds² × log n_rounds)
-
-Empirical verification: Our timing experiments confirm exponent ≈ 2.1 (close to n²)
-
---- 
-
-### Reasoning: 
-Based on typical bandit algorithms:
-Risk-Aware Bandit (Quantile Regression)
-
-Per round complexity: O(n_arms × n_samples × log n_samples)
-
-Quantile regression typically requires sorting: O(n log n)
-Done for each arm: multiply by n_arms
-
-
-Total complexity: O(n_rounds × n_arms × n_samples × log n_samples)
-
-OLS Bandit
-
-Per round complexity: O(n_arms × p²)
-
-Where p is number of features/contexts
-Matrix operations in OLS: O(p²n) for n observations
-
-
-Total complexity: O(n_rounds × n_arms × p²)
-
-Overall simulation
-
-If you run multiple replications: multiply by n_replications
-Expected: Your make all takes ~8 minutes for 5 different df values
-
-
-## Evidence of numerical instability
-
-
+```
+```{bash}
+RuntimeWarning: invalid value encountered in divide
+```
