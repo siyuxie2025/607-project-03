@@ -362,7 +362,7 @@ class SimulationStudy:
 
         if use_ci:
             # Compute standard errors
-            se_risk_aware = np.std(cumulated_regret_RiskAware, axis=0, ddof=1) / np.sqrt(self.n_sim)
+            se_risk_aware = np.std(cumulated_regret_RiskAware, axis=0, ddof=1) / np.sqrt(self.n_sim+0.01)
             se_ols = np.std(cumulated_regret_OLS, axis=0, ddof=1) / np.sqrt(self.n_sim)
 
             t_crit = stats.t.ppf((1 + ci_level) / 2, df=self.n_sim - 1)
