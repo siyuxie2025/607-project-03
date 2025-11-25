@@ -223,7 +223,7 @@ def plot_regret_comparison(all_results, output_dir, use_ci=True, ci_level=0.95):
             se_rab = np.std(regret_rab, axis=0, ddof=1) / np.sqrt(n_sim)
             se_ols = np.std(regret_ols, axis=0, ddof=1) / np.sqrt(n_sim)
             
-            t_crit = stats.t.ppf((1 + ci_level) / 2, n_sim - 1)
+            t_crit = stats.t.ppf((1 + ci_level) / 2., n_sim - 1)
             
             lower_rab = mean_rab - t_crit * se_rab
             upper_rab = mean_rab + t_crit * se_rab
@@ -322,7 +322,7 @@ def plot_beta_error_comparison(all_results, output_dir, use_ci=True, ci_level=0.
             se_rab = np.std(rab_avg, axis=0, ddof=1) / np.sqrt(n_sim)
             se_ols = np.std(ols_avg, axis=0, ddof=1) / np.sqrt(n_sim)
             
-            t_crit = stats.t.ppf((1 + ci_level) / 2, n_sim - 1)
+            t_crit = stats.t.ppf((1 + ci_level) / 2., n_sim - 1)
             
             lower_rab = mean_rab - t_crit * se_rab
             upper_rab = mean_rab + t_crit * se_rab
@@ -350,7 +350,7 @@ def plot_beta_error_comparison(all_results, output_dir, use_ci=True, ci_level=0.
         # Add final values
         final_rab = mean_rab[-1]
         final_ols = mean_ols[-1]
-        improvement = ((final_ols - final_rab) / final_ols * 100) if final_ols > final_rab else 0
+        improvement = ((final_ols - final_rab) / (final_ols * 100)* 10000) if final_ols > final_rab else 0
         ax.text(0.95, 0.95, f'Final Error:\nRAB: {final_rab:.4f}\nOLS: {final_ols:.4f}\nΔ: {improvement:.1f}%',
                 transform=ax.transAxes, fontsize=9,
                 verticalalignment='top', horizontalalignment='right',

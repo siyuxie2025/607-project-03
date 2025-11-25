@@ -185,7 +185,7 @@ class UniformGenerator(DataGenerator):
 
     @property
     def null_value(self):
-        return (self.low + self.high) / 2
+        return (self.low + self.high) / 2.
     
 
 class TGenerator(DataGenerator):
