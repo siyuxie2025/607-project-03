@@ -22,9 +22,9 @@ import sys
 # Add src to path
 sys.path.insert(0, 'src')
 
-from src.simulation import SimulationStudy
-from src.parallel_simulation import ParallelSimulationStudy
-from src.generators import TGenerator, TruncatedNormalGenerator
+from simulation import SimulationStudy
+from parallel_simulation import ParallelSimulationStudy
+from generators import TGenerator, TruncatedNormalGenerator
 
 # Create output directory
 Path('results/figures').mkdir(parents=True, exist_ok=True)
