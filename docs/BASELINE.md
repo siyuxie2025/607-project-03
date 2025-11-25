@@ -29,10 +29,8 @@ Final Regret Summary:
   OLS:        140.93 ± 17.64
 ```
 
-Test heavy tails
-`python profile_simulation.py --quick --df=1.5`
 Test larger scale
-`python profile_simulation.py --quick --T=200 --K=10`
+`python profile_simulation.py --quick --T=1000 --K=10`
 
 ### Full Profiling Suite
 `python profile_simulation.py --full`
