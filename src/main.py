@@ -16,10 +16,11 @@ from tqdm import tqdm
 import os
 
 from simulation import SimulationStudy
+from parallel_simulation import ParallelSimulationStudy
 from generators import NormalGenerator, TGenerator, TruncatedNormalGenerator
 
 
-def run_experiments(df_values, n_sim=50, K=2, d=10, T=1000, q=5, h=0.5, tau=0.5, random_seed=1010):
+def run_experiments(df_values, n_sim=50, K=2, d=10, T=1000, q=5, h=0.5, tau=0.5, random_seed=1010, parallel=True):
     """
     Run simulations across different t-distribution degrees of freedom.
     
@@ -52,35 +53,67 @@ def run_experiments(df_values, n_sim=50, K=2, d=10, T=1000, q=5, h=0.5, tau=0.5,
     results_by_df = {}
     
     context_generator = TruncatedNormalGenerator(mean=0.0, std=1.0)
+
+    if parallel:
+
+        for df in tqdm(df_values, desc="Running experiments across df values"):
+            print(f"\n{'='*60}")
+            print(f"Running simulation with t-distribution df={df}")
+            print(f"{'='*60}")
+            
+            err_generator = TGenerator(df=df, scale=0.7)
+            
+            study = ParallelSimulationStudy(
+                n_sim=n_sim, 
+                K=K, 
+                d=d, 
+                T=T, 
+                q=q, 
+                h=h, 
+                tau=tau,
+                random_seed=random_seed,
+                err_generator=err_generator,
+                context_generator=context_generator
+            )
+            
+            results = study.run_simulation(n_jobs=os.cpu_count()-1)
+            results_by_df[df] = results
+            
+            print(f"\nCompleted df={df}")
+            print(f"Final regret - RAB: {np.mean(results['cumulated_regret_RiskAware'][:, -1]):.2f}")
+            print(f"Final regret - OLS: {np.mean(results['cumulated_regret_OLS'][:, -1]):.2f}")
+        
+        return results_by_df, study.T, study.n_sim, study.K, study.d, study.tau
     
-    for df in tqdm(df_values, desc="Running experiments across df values"):
-        print(f"\n{'='*60}")
-        print(f"Running simulation with t-distribution df={df}")
-        print(f"{'='*60}")
+    else:
+        for df in tqdm(df_values, desc="Running experiments across df values"):
+            print(f"\n{'='*60}")
+            print(f"Running simulation with t-distribution df={df}")
+            print(f"{'='*60}")
+            
+            err_generator = TGenerator(df=df, scale=0.7)
+            
+            study = SimulationStudy(
+                n_sim=n_sim, 
+                K=K, 
+                d=d, 
+                T=T, 
+                q=q, 
+                h=h, 
+                tau=tau,
+                random_seed=random_seed,
+                err_generator=err_generator,
+                context_generator=context_generator
+            )
+            
+            results = study.run_simulation()
+            results_by_df[df] = results
+            
+            print(f"\nCompleted df={df}")
+            print(f"Final regret - RAB: {np.mean(results['cumulated_regret_RiskAware'][:, -1]):.2f}")
+            print(f"Final regret - OLS: {np.mean(results['cumulated_regret_OLS'][:, -1]):.2f}")
         
-        err_generator = TGenerator(df=df, scale=0.7)
-        
-        study = SimulationStudy(
-            n_sim=n_sim, 
-            K=K, 
-            d=d, 
-            T=T, 
-            q=q, 
-            h=h, 
-            tau=tau,
-            random_seed=random_seed,
-            err_generator=err_generator,
-            context_generator=context_generator
-        )
-        
-        results = study.run_simulation()
-        results_by_df[df] = results
-        
-        print(f"\nCompleted df={df}")
-        print(f"Final regret - RAB: {np.mean(results['cumulated_regret_RiskAware'][:, -1]):.2f}")
-        print(f"Final regret - OLS: {np.mean(results['cumulated_regret_OLS'][:, -1]):.2f}")
-    
-    return results_by_df, study.T, study.n_sim, study.K, study.d, study.tau
+        return results_by_df, study.T, study.n_sim, study.K, study.d, study.tau
 
 
 def plot_combined_regret(results_by_df, df_values, T, n_sim, K, d, tau, use_ci=True, ci_level=0.95):
@@ -121,10 +154,10 @@ def plot_combined_regret(results_by_df, df_values, T, n_sim, K, d, tau, use_ci=T
         mean_ols = np.mean(regret_ols, axis=0)
         
         if use_ci:
-            se_rab = np.std(regret_rab, axis=0, ddof=1) / np.sqrt(n_sim)
-            se_ols = np.std(regret_ols, axis=0, ddof=1) / np.sqrt(n_sim)
+            se_rab = np.std(regret_rab, axis=0, ddof=1) / np.sqrt(n_sim+0.01)
+            se_ols = np.std(regret_ols, axis=0, ddof=1) / np.sqrt(n_sim+0.01)
             
-            t_crit = stats.t.ppf((1 + ci_level) / 2, n_sim - 1)
+            t_crit = stats.t.ppf((1 + ci_level) / 2., n_sim - 1)
             
             lower_rab = mean_rab - t_crit * se_rab
             upper_rab = mean_rab + t_crit * se_rab
@@ -206,8 +239,8 @@ def plot_combined_beta_error(results_by_df, df_values, T, n_sim, K, d, tau, use_
         mean_ols = np.mean(ols_avg, axis=0)
         
         if use_ci:
-            se_rab = np.std(rab_avg, axis=0, ddof=1) / np.sqrt(n_sim)
-            se_ols = np.std(ols_avg, axis=0, ddof=1) / np.sqrt(n_sim)
+            se_rab = np.std(rab_avg, axis=0, ddof=1) / np.sqrt(n_sim+0.01)
+            se_ols = np.std(ols_avg, axis=0, ddof=1) / np.sqrt(n_sim+0.01)
             
             t_crit = stats.t.ppf((1 + ci_level) / 2, n_sim - 1)
             
