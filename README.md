@@ -32,10 +32,7 @@ make benchmark    # Compare optimizations
 ```
 
 ### Results
-All results saved to `results/` directory:
-- Data: `results/data/`
-- Figures: `results/figures/`
-- Profiling: `results/*.prof`
+All results saved to `results/` directory。 
 
 See `make help` for all available commands.
 
@@ -59,22 +56,11 @@ results/
 ├── stability_comparison.csv           # Stability results
 ├── simulation_warnings.log            # Detailed log
 ├── numerical_issues_summary.json      # Issue tracker
-├── data/                              # Simulation results
-│   └── simulation_*.pkl
-└── figures/                           # Generated plots
-    ├── regret_comparison.pdf
-    ├── beta_error_comparison.pdf
-    └── comparison_by_df.pdf
+│── simulation_*.pkl
+├── regret_comparison.pdf
+├── beta_error_comparison.pdf
+└── comparison_by_df.pdf
 ```
 
 ## **Estimated Runtime**
 About 5 minutes with make all command. 
-
-## **Summary of Key Findings**
-![Cumulative regret comparison](results/main_regret_comparison_K2_d10_T1000.png)
-
-When the number of arms $K=2$, the cumulative regret for risk-aware bandit is slightly better than the OLS bandit, especially when the error distribution is heavy-tailed. But as the degree of freedom increases, the advantage becomes less. 
-
-![Beta MSE comparison](results/main_beta_error_comparison_K2_d10_T1000.png)
-RAB (Risk-aware Bandit) has an obvious advantage for the recovery of the true beta value, especially when the error has heavy-tailed distributions. 
-
