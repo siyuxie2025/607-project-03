@@ -11,7 +11,7 @@ Key improvements:
 - Support for both multiprocessing and joblib backends
 
 Usage:
-    from src.parallel_simulation import ParallelSimulationStudy
+    from parallel_simulation import ParallelSimulationStudy
     
     study = ParallelSimulationStudy(n_sim=50, K=2, d=10, T=150, ...)
     results = study.run_simulation(n_jobs=8)  # Use 8 cores
@@ -26,7 +26,7 @@ from tqdm import tqdm
 import warnings
 
 # Import the original SimulationStudy
-from src.simulation import SimulationStudy
+from simulation import SimulationStudy
 
 
 class ParallelSimulationStudy(SimulationStudy):
