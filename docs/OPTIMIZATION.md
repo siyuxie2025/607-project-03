@@ -212,7 +212,14 @@ else:
 ```
 
 **Performance Impact**: 
-TOBE UPDATED
+Most of the Runtime errors are eliminated. 
 
 **Trade-off**:
-There is no much 
+ - Pros: It successfully eliminates most numerical warnings and makes code more reliable and robust. 
+ - Cons: Regularization may slightly bias estimates. But as total sample size grows, the impact will be negligible. There's a slight increase in code complexity. 
+
+
+# Lessons Learned
+At the beginning, I believed parallelization would increase the code runtime and I found it quite surprising when there was no much improvement. I tried to debug the code and parallelization structure. However, I found that it was because that the package `quantes` that I used has GIL (Global Interpreter Lock) issue. I should choose C++/C based packages if I were to perform parallelization computation.
+Another useful technique is tablized variance, mean and division computation. They would improve the numerical stability when there're extreme values. 
+However, I think in this code example, array computing would not be that helpful unless the contextual vector  is sparse and high-dimensional. 
