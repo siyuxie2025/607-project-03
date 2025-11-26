@@ -1,0 +1,322 @@
+
+================================================================================
+REGRESSION TEST SUITE FOR BANDIT OPTIMIZATIONS
+================================================================================
+Tolerance: 10.0%
+Random Seed: 42
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Summary Statistics
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Final regret and beta errors match...
+Running simulations:   0%|          | 0/20 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 64/200 [00:00<00:00, 632.37it/s][A
+Running one scenario:  64%|██████▍   | 128/200 [00:00<00:00, 625.14it/s][A
+Running one scenario:  96%|█████████▌| 191/200 [00:00<00:00, 582.43it/s][A
+                                                                        [ARunning simulations:   5%|▌         | 1/20 [00:00<00:06,  2.94it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  16%|█▌        | 32/200 [00:00<00:00, 241.67it/s][A
+Running one scenario:  64%|██████▍   | 128/200 [00:00<00:00, 504.10it/s][A
+Running one scenario:  89%|████████▉ | 178/200 [00:00<00:00, 498.83it/s][A
+                                                                        [ARunning simulations:  10%|█         | 2/20 [00:00<00:06,  2.59it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  62%|██████▎   | 125/200 [00:00<00:00, 801.96it/s][A
+                                                                        [ARunning simulations:  15%|█▌        | 3/20 [00:01<00:06,  2.69it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 64/200 [00:00<00:00, 424.56it/s][A
+Running one scenario:  64%|██████▎   | 127/200 [00:00<00:00, 457.59it/s][A
+Running one scenario:  86%|████████▋ | 173/200 [00:00<00:00, 421.05it/s][A
+                                                                        [ARunning simulations:  20%|██        | 4/20 [00:01<00:06,  2.46it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  63%|██████▎   | 126/200 [00:00<00:00, 1162.96it/s][A
+                                                                         [ARunning simulations:  25%|██▌       | 5/20 [00:01<00:05,  2.84it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  67%|██████▋   | 134/200 [00:00<00:00, 1325.81it/s][A
+                                                                         [ARunning simulations:  30%|███       | 6/20 [00:02<00:04,  3.25it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  62%|██████▎   | 125/200 [00:00<00:00, 924.29it/s][A
+                                                                        [ARunning simulations:  35%|███▌      | 7/20 [00:02<00:04,  2.73it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 64/200 [00:00<00:00, 509.46it/s][A
+Running one scenario:  64%|██████▎   | 127/200 [00:00<00:00, 573.37it/s][A
+Running one scenario:  93%|█████████▎| 186/200 [00:00<00:00, 490.10it/s][A
+                                                                        [ARunning simulations:  40%|████      | 8/20 [00:02<00:04,  2.66it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:   4%|▎         | 7/200 [00:00<00:03, 62.15it/s][A
+Running one scenario:  30%|███       | 61/200 [00:00<00:00, 318.39it/s][A
+Running one scenario:  64%|██████▎   | 127/200 [00:00<00:00, 381.26it/s][A
+Running one scenario:  84%|████████▍ | 169/200 [00:00<00:00, 392.19it/s][A
+                                                                        [ARunning simulations:  45%|████▌     | 9/20 [00:03<00:04,  2.35it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  34%|███▍      | 69/200 [00:00<00:00, 689.85it/s][A
+Running one scenario:  69%|██████▉   | 138/200 [00:00<00:00, 668.24it/s][A
+                                                                        [ARunning simulations:  50%|█████     | 10/20 [00:03<00:04,  2.49it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  63%|██████▎   | 126/200 [00:00<00:00, 729.95it/s][A
+Running one scenario: 100%|█████████▉| 199/200 [00:00<00:00, 541.77it/s][A
+                                                                        [ARunning simulations:  55%|█████▌    | 11/20 [00:04<00:03,  2.59it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  31%|███       | 62/200 [00:00<00:00, 445.56it/s][A
+Running one scenario:  63%|██████▎   | 126/200 [00:00<00:00, 400.73it/s][A
+Running one scenario:  84%|████████▎ | 167/200 [00:00<00:00, 291.27it/s][A
+                                                                        [ARunning simulations:  60%|██████    | 12/20 [00:04<00:03,  2.25it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  64%|██████▎   | 127/200 [00:00<00:00, 1189.64it/s][A
+                                                                         [ARunning simulations:  65%|██████▌   | 13/20 [00:05<00:02,  2.58it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 64/200 [00:00<00:00, 420.30it/s][A
+Running one scenario:  64%|██████▎   | 127/200 [00:00<00:00, 427.95it/s][A
+Running one scenario:  85%|████████▌ | 170/200 [00:00<00:00, 350.25it/s][A
+                                                                        [ARunning simulations:  70%|███████   | 14/20 [00:05<00:02,  2.35it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  31%|███       | 62/200 [00:00<00:00, 457.58it/s][A
+Running one scenario:  62%|██████▎   | 125/200 [00:00<00:00, 544.66it/s][A
+Running one scenario:  90%|█████████ | 181/200 [00:00<00:00, 379.00it/s][A
+                                                                        [ARunning simulations:  75%|███████▌  | 15/20 [00:05<00:02,  2.26it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 64/200 [00:00<00:00, 581.88it/s][A
+Running one scenario:  66%|██████▋   | 133/200 [00:00<00:00, 637.37it/s][A
+Running one scenario:  98%|█████████▊| 197/200 [00:00<00:00, 574.81it/s][A
+                                                                        [ARunning simulations:  80%|████████  | 16/20 [00:06<00:01,  2.43it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  63%|██████▎   | 126/200 [00:00<00:00, 984.59it/s][A
+                                                                        [ARunning simulations:  85%|████████▌ | 17/20 [00:06<00:01,  2.50it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  62%|██████▎   | 125/200 [00:00<00:00, 1153.50it/s][A
+                                                                         [ARunning simulations:  90%|█████████ | 18/20 [00:07<00:00,  2.63it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  62%|██████▎   | 125/200 [00:00<00:00, 1172.43it/s][A
+                                                                         [ARunning simulations:  95%|█████████▌| 19/20 [00:07<00:00,  2.80it/s]
+Running one scenario:   0%|          | 0/200 [00:00<?, ?it/s][A
+Running one scenario:  64%|██████▎   | 127/200 [00:00<00:00, 965.59it/s][A
+                                                                        [ARunning simulations: 100%|██████████| 20/20 [00:07<00:00,  2.95it/s]Running simulations: 100%|██████████| 20/20 [00:07<00:00,  2.62it/s]
+    Mean RAB Regret: 120.84 ± 36.08
+    Mean OLS Regret: 137.31 ± 37.53
+    Mean RAB Beta Error: 0.2983 ± 0.1011
+    Mean OLS Beta Error: 0.5912 ± 0.1673
+✗ FAILED: RAB regret outside expected range: 120.84
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Beta Convergence
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Beta estimates converge...
+Running simulations:   0%|          | 0/10 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  21%|██▏       | 64/300 [00:00<00:00, 629.23it/s][A
+Running one scenario:  43%|████▎     | 128/300 [00:00<00:00, 615.41it/s][A
+Running one scenario:  63%|██████▎   | 190/300 [00:00<00:00, 575.62it/s][A
+Running one scenario:  83%|████████▎ | 248/300 [00:00<00:00, 556.51it/s][A
+                                                                        [ARunning simulations:  10%|█         | 1/10 [00:00<00:05,  1.69it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 127/300 [00:00<00:00, 1200.61it/s][A
+Running one scenario:  83%|████████▎ | 248/300 [00:00<00:00, 660.76it/s] [A
+                                                                        [ARunning simulations:  20%|██        | 2/10 [00:01<00:04,  1.93it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  21%|██▏       | 64/300 [00:00<00:00, 417.52it/s][A
+Running one scenario:  42%|████▏     | 127/300 [00:00<00:00, 450.22it/s][A
+Running one scenario:  58%|█████▊    | 173/300 [00:00<00:00, 413.81it/s][A
+Running one scenario:  75%|███████▍  | 224/300 [00:00<00:00, 442.20it/s][A
+Running one scenario:  90%|████████▉ | 269/300 [00:00<00:00, 400.45it/s][A
+                                                                        [ARunning simulations:  30%|███       | 3/10 [00:01<00:04,  1.63it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 125/300 [00:00<00:00, 1222.56it/s][A
+Running one scenario:  83%|████████▎ | 248/300 [00:00<00:00, 624.83it/s] [A
+                                                                        [ARunning simulations:  40%|████      | 4/10 [00:02<00:03,  1.77it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 125/300 [00:00<00:00, 867.93it/s][A
+Running one scenario:  71%|███████   | 212/300 [00:00<00:00, 360.33it/s][A
+Running one scenario:  87%|████████▋ | 262/300 [00:00<00:00, 299.97it/s][A
+                                                                        [ARunning simulations:  50%|█████     | 5/10 [00:03<00:03,  1.51it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 127/300 [00:00<00:00, 1226.51it/s][A
+Running one scenario:  83%|████████▎ | 250/300 [00:00<00:00, 635.87it/s] [A
+                                                                        [ARunning simulations:  60%|██████    | 6/10 [00:03<00:02,  1.65it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  21%|██▏       | 64/300 [00:00<00:00, 630.18it/s][A
+Running one scenario:  45%|████▌     | 136/300 [00:00<00:00, 672.87it/s][A
+Running one scenario:  68%|██████▊   | 204/300 [00:00<00:00, 548.99it/s][A
+Running one scenario:  87%|████████▋ | 262/300 [00:00<00:00, 446.10it/s][A
+                                                                        [ARunning simulations:  70%|███████   | 7/10 [00:04<00:01,  1.65it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 125/300 [00:00<00:00, 1068.18it/s][A
+Running one scenario:  77%|███████▋  | 232/300 [00:00<00:00, 582.85it/s] [A
+                                                                        [ARunning simulations:  80%|████████  | 8/10 [00:04<00:01,  1.73it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 127/300 [00:00<00:00, 1184.36it/s][A
+Running one scenario:  82%|████████▏ | 246/300 [00:00<00:00, 679.92it/s] [A
+                                                                        [ARunning simulations:  90%|█████████ | 9/10 [00:05<00:00,  1.83it/s]
+Running one scenario:   0%|          | 0/300 [00:00<?, ?it/s][A
+Running one scenario:  42%|████▏     | 125/300 [00:00<00:00, 1197.95it/s][A
+Running one scenario:  82%|████████▏ | 245/300 [00:00<00:00, 564.65it/s] [A
+                                                                        [ARunning simulations: 100%|██████████| 10/10 [00:05<00:00,  1.84it/s]Running simulations: 100%|██████████| 10/10 [00:05<00:00,  1.74it/s]
+    Initial RAB Beta Error: 2.2818
+    Final RAB Beta Error: 0.2330
+    Initial OLS Beta Error: 2.3267
+    Final OLS Beta Error: 0.5182
+✓ PASSED: Convergence verified: RAB converges, OLS converges, RAB trend: -0.000747, OLS trend: -0.000856, RAB stable, OLS stable
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Action Selection Consistency
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Action selection consistency...
+    Actions range: [0, 2]
+    Action distribution: [81 30 39]
+✓ PASSED: Action selection valid: All actions valid, All 3 arms explored, Forced sampling correct, Max proportion: 54.0%
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Edge Cases
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Edge case handling...
+Running simulations:   0%|          | 0/3 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/10 [00:00<?, ?it/s][A
+                                                            [A
+Running one scenario:   0%|          | 0/10 [00:00<?, ?it/s][A
+                                                            [A
+Running one scenario:   0%|          | 0/10 [00:00<?, ?it/s][A
+                                                            [ARunning simulations: 100%|██████████| 3/3 [00:00<00:00, 36.28it/s]
+Running simulations:   0%|          | 0/2 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/50 [00:00<?, ?it/s][A
+                                                            [A
+Running one scenario:   0%|          | 0/50 [00:00<?, ?it/s][A
+Running one scenario:  14%|█▍        | 7/50 [00:00<00:00, 52.67it/s][A
+                                                                    [ARunning simulations: 100%|██████████| 2/2 [00:00<00:00,  8.51it/s]Running simulations: 100%|██████████| 2/2 [00:00<00:00,  8.50it/s]
+Running simulations:   0%|          | 0/2 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/50 [00:00<?, ?it/s][A
+Running one scenario:  40%|████      | 20/50 [00:00<00:00, 198.53it/s][A
+                                                                      [ARunning simulations:  50%|█████     | 1/2 [00:00<00:00,  8.55it/s]
+Running one scenario:   0%|          | 0/50 [00:00<?, ?it/s][A
+Running one scenario:  94%|█████████▍| 47/50 [00:00<00:00, 279.36it/s][A
+                                                                      [ARunning simulations: 100%|██████████| 2/2 [00:00<00:00,  5.91it/s]Running simulations: 100%|██████████| 2/2 [00:00<00:00,  6.19it/s]
+Running simulations:   0%|          | 0/1 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/50 [00:00<?, ?it/s][A
+                                                            [ARunning simulations: 100%|██████████| 1/1 [00:00<00:00, 14.98it/s]
+✓ PASSED: All edge cases handled: Small T (T=10), Large d (d=30), Many arms (K=6), Single simulation (n_sim=1)
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Heavy-Tailed Distributions
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Heavy-tailed distribution handling...
+Running simulations:   0%|          | 0/10 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations:  20%|██        | 2/10 [00:00<00:00, 12.32it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations:  40%|████      | 4/10 [00:00<00:00, 11.42it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations:  60%|██████    | 6/10 [00:00<00:00, 12.20it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:   5%|▌         | 5/100 [00:00<00:02, 45.15it/s][A
+                                                                     [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations:  80%|████████  | 8/10 [00:00<00:00, 10.11it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  63%|██████▎   | 63/100 [00:00<00:00, 625.26it/s][A
+                                                                       [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  14%|█▍        | 14/100 [00:00<00:00, 138.37it/s][A
+                                                                       [ARunning simulations: 100%|██████████| 10/10 [00:01<00:00,  9.04it/s]Running simulations: 100%|██████████| 10/10 [00:01<00:00,  9.91it/s]
+    Mean RAB Regret: 68.97
+    Mean OLS Regret: 97.31
+    Mean RAB Beta Error: 2.4700
+    Max RAB Beta Error: 3.2722
+✓ PASSED: Heavy tails handled: No NaN/Inf in RAB, No NaN/Inf in OLS, RAB bounded (max=3.27), OLS bounded (max=3.18), Non-negative regret, Bounded regret
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Extreme Values Handling
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Extreme value handling...
+Running simulations:   0%|          | 0/5 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations:  40%|████      | 2/5 [00:00<00:00, 13.62it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  99%|█████████▉| 99/100 [00:00<00:00, 989.85it/s][A
+                                                                       [ARunning simulations:  80%|████████  | 4/5 [00:00<00:00, 11.72it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations: 100%|██████████| 5/5 [00:00<00:00, 12.05it/s]
+✓ PASSED: Extreme values handled: 4 checks passed
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Small Sample Behavior
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Small sample behavior...
+Running simulations:   0%|          | 0/5 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/15 [00:00<?, ?it/s][A
+                                                            [A
+Running one scenario:   0%|          | 0/15 [00:00<?, ?it/s][A
+                                                            [A
+Running one scenario:   0%|          | 0/15 [00:00<?, ?it/s][A
+                                                            [A
+Running one scenario:   0%|          | 0/15 [00:00<?, ?it/s][A
+                                                            [ARunning simulations:  80%|████████  | 4/5 [00:00<00:00, 29.06it/s]
+Running one scenario:   0%|          | 0/15 [00:00<?, ?it/s][A
+                                                            [ARunning simulations: 100%|██████████| 5/5 [00:00<00:00, 27.56it/s]
+✓ PASSED: Small samples handled correctly (n < d)
+
+────────────────────────────────────────────────────────────────────────────────
+Running: Numerical Stability
+────────────────────────────────────────────────────────────────────────────────
+  Testing: Numerical stability...
+Running simulations:   0%|          | 0/5 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  64%|██████▍   | 64/100 [00:00<00:00, 637.87it/s][A
+                                                                       [ARunning simulations:  20%|██        | 1/5 [00:00<00:00,  9.82it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 32/100 [00:00<00:00, 238.18it/s][A
+                                                                       [ARunning simulations:  60%|██████    | 3/5 [00:00<00:00,  8.59it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations: 100%|██████████| 5/5 [00:00<00:00, 10.67it/s]Running simulations: 100%|██████████| 5/5 [00:00<00:00, 10.21it/s]
+Running simulations:   0%|          | 0/5 [00:00<?, ?it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  64%|██████▍   | 64/100 [00:00<00:00, 633.50it/s][A
+                                                                       [ARunning simulations:  20%|██        | 1/5 [00:00<00:00,  9.75it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+Running one scenario:  32%|███▏      | 32/100 [00:00<00:00, 239.47it/s][A
+                                                                       [ARunning simulations:  60%|██████    | 3/5 [00:00<00:00,  8.63it/s]
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [A
+Running one scenario:   0%|          | 0/100 [00:00<?, ?it/s][A
+                                                             [ARunning simulations: 100%|██████████| 5/5 [00:00<00:00, 10.73it/s]Running simulations: 100%|██████████| 5/5 [00:00<00:00, 10.26it/s]
+✓ PASSED: Numerical stability verified: Reproducible, All finite, Reasonable values
+
+================================================================================
+TEST SUMMARY
+================================================================================
+
+Total Tests: 8
+Passed: 7 ✓
+Failed: 1 ✗
+Warnings: 0
+
+Failed Tests:
+  ✗ Summary Statistics
+
+Passed Tests:
+  ✓ Beta Convergence
+  ✓ Action Selection Consistency
+  ✓ Edge Cases
+  ✓ Heavy-Tailed Distributions
+  ✓ Extreme Values Handling
+  ✓ Small Sample Behavior
+  ✓ Numerical Stability
+
+================================================================================
+✗ SOME TESTS FAILED
+================================================================================
